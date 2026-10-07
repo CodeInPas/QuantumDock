@@ -1,0 +1,558 @@
+object FormMain: TFormMain
+  Left = 250
+  Height = 749
+  Top = 100
+  Width = 1327
+  VertScrollBar.Visible = False
+  Caption = 'QUANTUM-DOCK: DeepSpace OS'
+  ClientHeight = 749
+  ClientWidth = 1327
+  Color = 1052170
+  Font.Color = clWhite
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
+  Menu = MainMenu1
+  Position = poScreenCenter
+  LCLVersion = '4.8.0.0'
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object pnlControlBoard: TPanel
+    Left = 0
+    Height = 749
+    Top = 0
+    Width = 1327
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 749
+    ClientWidth = 1327
+    Color = clBlack
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object lblControlBoardTitle: TLabel
+      AnchorSideTop.Control = pnlControlBoard
+      Left = 8
+      Height = 21
+      Top = 5
+      Width = 133
+      BorderSpacing.Top = 5
+      Caption = 'CONTROL BOARD'
+      Font.Color = 16750899
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object pnlOrbitalMap: TPanel
+      Left = 0
+      Height = 749
+      Top = 0
+      Width = 1327
+      Align = alClient
+      BevelColor = 10079232
+      BevelOuter = bvNone
+      ClientHeight = 749
+      ClientWidth = 1327
+      Color = 15919334
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 0
+      object Panel2: TPanel
+        Left = 994
+        Height = 739
+        Top = 5
+        Width = 328
+        Align = alRight
+        BorderSpacing.Around = 5
+        BevelOuter = bvNone
+        ClientHeight = 739
+        ClientWidth = 328
+        ParentBackground = False
+        TabOrder = 0
+        object lblThrustTitle1: TLabel
+          Left = 5
+          Height = 17
+          Top = 5
+          Width = 318
+          Align = alTop
+          Alignment = taCenter
+          BorderSpacing.Around = 5
+          Caption = 'THRUST MANAGEMENT'
+          Font.Color = clBlack
+          Font.Height = -13
+          Font.Name = 'Segoe UI'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object btnExecute: TSimPushButton
+          Left = 0
+          Height = 51
+          Top = 637
+          Width = 328
+          Caption = 'PUSH'
+          ButtonColor = clTeal
+          ButtonShape = sbsRectangular
+          Align = alBottom
+          Font.Color = clWhite
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          OnClick = btnExecuteClick
+        end
+        object btnReset: TSimPushButton
+          Left = 0
+          Height = 51
+          Top = 688
+          Width = 328
+          Caption = 'RESET MISSION'
+          ButtonShape = sbsRectangular
+          Align = alBottom
+          Font.Color = clWhite
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          OnClick = btnResetClick
+        end
+        object Panel1: TPanel
+          Left = 10
+          Height = 214
+          Top = 32
+          Width = 308
+          Align = alTop
+          BorderSpacing.Around = 10
+          BevelOuter = bvSpace
+          Caption = 'Panel1'
+          ClientHeight = 214
+          ClientWidth = 308
+          ParentBackground = False
+          TabOrder = 1
+          object lblFuelVal: TCircularGauge
+            Left = 1
+            Height = 212
+            Top = 1
+            Width = 175
+            Max = 100
+            MinAngle = 135
+            MaxAngle = 405
+            Caption = 'KG'
+            Units = 'x1000'
+            Align = alLeft
+            Anchors = []
+            Font.Name = 'Arial'
+            Font.Style = [fsBold]
+          end
+          object lblIntegrityVal: TSimLedBarGraph
+            Left = 213
+            Height = 212
+            Top = 1
+            Width = 47
+            Max = 100
+            ColorLow = 4227327
+            ColorMid = 11599871
+            ColorHigh = 11660949
+            Align = alRight
+          end
+          object lblBatteryVal1: TSimLedBarGraph
+            Left = 260
+            Height = 212
+            Top = 1
+            Width = 47
+            Value = 100
+            Max = 100
+            ColorLow = 4227327
+            ColorMid = 11599871
+            ColorHigh = 11660949
+            Align = alRight
+          end
+        end
+        object Panel3: TPanel
+          Left = 0
+          Height = 55
+          Top = 582
+          Width = 328
+          Align = alBottom
+          BevelOuter = bvNone
+          ClientHeight = 55
+          ClientWidth = 328
+          ParentBackground = False
+          TabOrder = 2
+          object Panel5: TPanel
+            Left = 3
+            Height = 49
+            Top = 3
+            Width = 322
+            Align = alClient
+            BorderSpacing.Around = 3
+            BevelOuter = bvNone
+            ClientHeight = 49
+            ClientWidth = 322
+            ParentBackground = False
+            TabOrder = 0
+            object btnBurn10: TSimPushButton
+              Left = 0
+              Height = 49
+              Top = 0
+              Width = 80
+              Caption = '10s'
+              ButtonShape = sbsRectangular
+              Align = alLeft
+              Font.Color = clWhite
+              Font.Height = -13
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              OnClick = btnBurn10Click
+            end
+            object btnBurn30: TSimPushButton
+              Left = 80
+              Height = 49
+              Top = 0
+              Width = 80
+              Caption = '30s'
+              ButtonShape = sbsRectangular
+              Align = alLeft
+              Font.Color = clWhite
+              Font.Height = -13
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              OnClick = btnBurn30Click
+            end
+            object btnBurn60: TSimPushButton
+              Left = 160
+              Height = 49
+              Top = 0
+              Width = 80
+              Caption = '60s'
+              ButtonShape = sbsRectangular
+              Align = alLeft
+              Font.Color = clWhite
+              Font.Height = -13
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              OnClick = btnBurn60Click
+            end
+            object btnBurnCustom: TSimPushButton
+              Left = 240
+              Height = 49
+              Top = 0
+              Width = 80
+              Caption = 'Custom'
+              ButtonColor = 4538911
+              ButtonShape = sbsRectangular
+              Align = alLeft
+              Font.Color = clWhite
+              Font.Height = -13
+              Font.Name = 'Arial'
+              Font.Style = [fsBold]
+              OnClick = btnBurnCustomClick
+            end
+          end
+        end
+        object Panel9: TPanel
+          Left = 10
+          Height = 36
+          Top = 488
+          Width = 308
+          Align = alBottom
+          BorderSpacing.Around = 10
+          BevelOuter = bvNone
+          Caption = 'Panel9'
+          ClientHeight = 36
+          ClientWidth = 308
+          ParentBackground = False
+          TabOrder = 3
+          object lblAngleLabel: TSevenSegment
+            Left = 234
+            Height = 36
+            Top = 0
+            Width = 74
+            Align = alRight
+          end
+          object tbAngle: TSimFader
+            Left = 0
+            Height = 36
+            Top = 0
+            Width = 234
+            Max = 359
+            Orientation = foHorizontal
+            OnChange = tbAngleChange
+            Align = alClient
+          end
+        end
+        object Panel8: TPanel
+          Left = 10
+          Height = 38
+          Top = 534
+          Width = 308
+          Align = alBottom
+          BorderSpacing.Around = 10
+          BevelOuter = bvNone
+          Caption = 'Panel8'
+          ClientHeight = 38
+          ClientWidth = 308
+          ParentBackground = False
+          TabOrder = 4
+          object lblPowerLabel: TSevenSegment
+            Left = 234
+            Height = 38
+            Top = 0
+            Width = 74
+            Align = alRight
+          end
+          object tbPower: TSimFader
+            Left = 0
+            Height = 38
+            Top = 0
+            Width = 234
+            Max = 100
+            Orientation = foHorizontal
+            OnChange = tbPowerChange
+            Align = alClient
+          end
+        end
+        object Panel4: TPanel
+          Left = 0
+          Height = 222
+          Top = 256
+          Width = 328
+          Align = alClient
+          BevelOuter = bvNone
+          ClientHeight = 222
+          ClientWidth = 328
+          Color = 3945766
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 5
+          object memoTerminal: TMemo
+            Left = 14
+            Height = 202
+            Top = 8
+            Width = 306
+            Align = alClient
+            Anchors = [akLeft, akBottom]
+            BorderSpacing.Left = 6
+            BorderSpacing.Bottom = 4
+            BorderSpacing.Around = 8
+            BorderStyle = bsNone
+            Color = 3945766
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'Consolas'
+            ParentFont = False
+            TabOrder = 0
+          end
+        end
+      end
+      object Panel6: TPanel
+        Left = 10
+        Height = 729
+        Top = 10
+        Width = 974
+        Align = alClient
+        BorderSpacing.Around = 10
+        BevelColor = clMaroon
+        BevelOuter = bvSpace
+        ClientHeight = 729
+        ClientWidth = 974
+        ParentBackground = False
+        TabOrder = 1
+        object pbOrbitalMap: TPaintBox
+          Left = 1
+          Height = 694
+          Top = 1
+          Width = 972
+          Align = alClient
+          Color = clBlack
+          ParentColor = False
+          OnPaint = pbOrbitalMapPaint
+          OnResize = pbOrbitalMapResize
+        end
+        object pnlTelemetry: TPanel
+          AnchorSideTop.Control = Owner
+          Left = 1
+          Height = 33
+          Top = 695
+          Width = 972
+          Align = alBottom
+          BevelOuter = bvNone
+          ClientHeight = 33
+          ClientWidth = 972
+          Color = 2301982
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 0
+          object lblTelemetryTitle: TLabel
+            Left = 5
+            Height = 23
+            Top = 5
+            Width = 207
+            Align = alLeft
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = 'TELEMETRY DATA  :::::: '
+            Font.Color = clSilver
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            Font.Style = [fsBold]
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblVelLabel: TLabel
+            Left = 223
+            Height = 23
+            Top = 5
+            Width = 81
+            Align = alLeft
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = 'Velocity:'
+            Font.Color = clWhite
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblVelVal: TLabel
+            Left = 315
+            Height = 23
+            Top = 5
+            Width = 90
+            Align = alLeft
+            Alignment = taRightJustify
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = '1278.4 m/s'
+            Font.Color = clAqua
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblApoLabel: TLabel
+            Left = 739
+            Height = 23
+            Top = 5
+            Width = 81
+            Align = alLeft
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = 'Apoapsis:'
+            Font.Color = clWhite
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblApoVal: TLabel
+            Left = 831
+            Height = 23
+            Top = 5
+            Width = 72
+            Align = alLeft
+            Alignment = taRightJustify
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = '215.1 km'
+            Font.Color = clWhite
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblPerLabel: TLabel
+            Left = 555
+            Height = 23
+            Top = 5
+            Width = 90
+            Align = alLeft
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = 'Periapsis:'
+            Font.Color = clWhite
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblPerVal: TLabel
+            Left = 656
+            Height = 23
+            Top = 5
+            Width = 72
+            Align = alLeft
+            Alignment = taRightJustify
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = '198.4 km'
+            Font.Color = clWhite
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblAlignLabel: TLabel
+            Left = 416
+            Height = 23
+            Top = 5
+            Width = 90
+            Align = alLeft
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = 'Alignment:'
+            Font.Color = clWhite
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+          object lblAlignVal: TLabel
+            Left = 517
+            Height = 23
+            Top = 5
+            Width = 27
+            Align = alLeft
+            Alignment = taRightJustify
+            BorderSpacing.Right = 6
+            BorderSpacing.Around = 5
+            Caption = '14%'
+            Font.Color = 51200
+            Font.Height = -17
+            Font.Name = 'Consolas'
+            ParentColor = False
+            ParentFont = False
+          end
+        end
+      end
+    end
+  end
+  object tmrUIUpdate: TTimer
+    Interval = 16
+    OnTimer = tmrUIUpdateTimer
+    Left = 40
+    Top = 32
+  end
+  object MainMenu1: TMainMenu
+    Left = 383
+    Top = 355
+    object MenuItem1: TMenuItem
+      Caption = 'Application'
+      object mnTerminate: TMenuItem
+        Caption = 'Exit'
+        OnClick = mnTerminateClick
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Help'
+      object mnHelp: TMenuItem
+        Caption = 'Tutorial EN + ID'
+        OnClick = mnHelpClick
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'About Me'
+        OnClick = MenuItem6Click
+      end
+    end
+  end
+end
