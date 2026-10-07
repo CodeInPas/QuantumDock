@@ -34,7 +34,8 @@ To compile and run this project from the source code, you need:
 
 1. **Lazarus IDE** (v2.2.0 or newer recommended) / Free Pascal Compiler.
 2. **BGRABitmap Package:** Install via Lazarus Online Package Manager (OPM).
-3. **External DLLs:**
+3. **SkeuoCom** : https://github.com/CodeInPas/SkeuoCom
+4. **External DLLs:**
    * `sqlite3.dll` (for telemetry database).
    * `bass.dll` (for audio engine).
    * *Make sure to place these DLLs in the same directory as the compiled executable.*
