@@ -24,8 +24,7 @@ This is not a casual arcade game; it's a hardcore survival simulation where ever
 
 ## 📸 Screenshots
 
-
-
+<img width="950" height="500" alt="Success" src="https://github.com/user-attachments/assets/a2b57a56-63c4-4f4b-95bf-dd61b9a4348c" />
 
 ---
 
